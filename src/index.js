@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 const shape = new THREE.BoxGeometry(1, 1, 1, 100, 100, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true, sided: THREE.DoubleSide});
+const material = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true, side: THREE.DoubleSide});
 const mesh = new THREE.Mesh(shape, material);
 scene.add(mesh);
 
@@ -16,8 +16,9 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 5;
 
 
-const controls = new OrbitControls(camera, renderer.domElement);
+new OrbitControls(camera, renderer.domElement);
 
+// lights
 const light = new THREE.PointLight(0xFFFF00, 1, 100);
 light.position.set(0, 10, 5);
 scene.add(light);
