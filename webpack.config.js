@@ -35,7 +35,7 @@ const config = {
     new CopyPlugin({
       patterns: [
         { from: 'src/index.html' },
-        // { from: 'src/static' }
+        { from: 'src/static' }
       ],
     })
   ]
